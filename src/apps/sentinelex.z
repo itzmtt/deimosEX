@@ -4,12 +4,12 @@ use ui
 
 lib = True
 name = "Sentinel"
-requires = ["cwii",]
+requires = ["cwi",]
 
 class ADDR
-    MODE    = 0x91A1
-    SUBMODE = 0x91A2
-    HISTORY = 0x93F8
+    MODE = 0xD111
+    SUBMODE = 0xD112
+    HISTORY = 0xD392
 .
 
 def get_mode: tuple(int, int)
