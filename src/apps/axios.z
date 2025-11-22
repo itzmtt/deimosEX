@@ -16,7 +16,7 @@ def main
         if c == 0
 
         .elif c == -1
-            break
-        .
+            break  
+        . 
     .
 .
