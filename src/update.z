@@ -11,7 +11,7 @@ use gc
 class INFO
     NAME = "official"
     VER = "1.4.0"
-    TARGET = "cwii"
+    TARGET = "cwi"
 .
 
 class OFW
@@ -51,9 +51,9 @@ def download(ver: str = "latest")
     .else
         url += b"/download/"+bytes(ver, "utf-8")
     .
-    url += b"/deimos.tar"
+    url += b"/deimos_ex.tar"
     r = get_stream(bytes(OFW.DOMAIN, "utf-8"), url)
-    with open("/deimos.tar", "wb") = f
+    with open("/deimos_ex.tar", "wb") = f
         i = 0
         while True
             chunk = r.read(512)
@@ -68,6 +68,6 @@ def download(ver: str = "latest")
     garbage.collect!
 
     <|"[FWUP] Extracting tar into /"
-    tar.extract("/deimos.tar", "/")
-    os.remove("/deimos.tar")
+    tar.extract("/deimos_ex.tar", "/")
+    os.remove("/deimos_ex.tar")
 .
